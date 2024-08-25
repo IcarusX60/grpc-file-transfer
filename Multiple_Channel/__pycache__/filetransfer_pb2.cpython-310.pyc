@@ -1,35 +1,0 @@
-o
-    yÕÊfY  ã                   @   sº   d Z ddlmZ ddlmZ ddlmZ  ddlm	Z
- e  
-¡ Ze 
-¡  
-d¡Zeƒ Ze
- ee¡ e
- ed e¡ ejs[de_d	ed
- _d
-ed
- _ded
- _ded
- _ded _ded _dS dS )zGenerated protocol buffer code.é    )Ú
-descriptor)Údescriptor_pool)Úsymbol_database)Ú builders*  
-filetransfer.protofiletransfer"0
-
-FileRequest
-filename (	
- content ("0
-FileResponse
- message (	
- content (2™
-FileTransferC
-SendFile.filetransfer.FileRequest.filetransfer.FileResponse" D
-
-ReceiveFile.filetransfer.FileRequest.filetransfer.FileResponsebproto3Úfiletransfer_pb2Né$   Ú_FILEREQUESTéT   éV   Ú
-_FILERESPONSEé†   é‰   Ú
-_FILETRANSFERi"  )Ú __doc__Úgoogle.protobufr   Ú
-_descriptorr   Ú_descriptor_poolr   Ú_symbol_databaseÚgoogle.protobuf.internalr   Ú_builderÚ DefaultÚ _sym_dbÚAddSerializedFileÚ
-DESCRIPTORÚ globalsÚ_globalsÚBuildMessageAndEnumDescriptorsÚBuildTopDescriptorsAndMessagesÚ_USE_C_DESCRIPTORSÚ_loaded_optionsÚ_serialized_startÚ_serialized_end© r"   r"   ú+/home/niam/grpc_example/filetransfer_pb2.pyÚ<module>   s&   
-
-
-
-
-ù
