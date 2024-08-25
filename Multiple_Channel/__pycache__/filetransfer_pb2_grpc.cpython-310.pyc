@@ -1,0 +1,51 @@
+o
+    yÕÊf  ã                   @   sö   d Z ddlZddlZddlZdZejZ dZdZ	dZ
+z
+dd l
+mZ ee eƒZ
+W n
+ e
+y1   dZ
+Y nw e
+r]e d	e › d
+d
+ de› d
+ de›  de › d
+ de› d
+ de	› d
+ e¡ G dd„ deƒZG dd„ deƒZdd„ ZG dd„ deƒZdS )zEClient and server classes corresponding to protobuf-defined services.é    Nz1.65.5z1.66.0zAugust 6, 2024F)Úfirst_version_is_lowerTz)The grpc package installed is at version ú,z> but the generated code in filetransfer_pb2_grpc.py depends onz	 grpcio>=Ú.z, Please upgrade your grpc module to grpcio>=z6 or downgrade your generated code using grpcio-tools<=z& This warning will become an error in z scheduled for release on c                   @   s   e Zd ZdZdd„ ZdS )ÚFileTransferStubú8Missing associated documentation comment in .proto file.c                 C   s<   |j dtjjtjjdd| _|j dtjjtjjdd| _ dS )zIConstructor.
+
+        Args:
+            channel: A grpc.Channel.
+        ú#/filetransfer.FileTransfer/SendFileT)Úrequest_serializerÚresponse_deserializerÚ_registered_methodú&/filetransfer.FileTransfer/ReceiveFileN)Ú
+unary_unaryÚfiletransfer__pb2Ú
+FileRequestÚSerializeToStringÚFileResponseÚ
+FromStringÚSendFileÚ
+ReceiveFile)ÚselfÚ channel© r   ú0/home/niam/grpc_example/filetransfer_pb2_grpc.pyÚ__init__$   s   üüzFileTransferStub.__init__N)Ú__name__Ú
+__module__Ú__qualname__Ú __doc__r   r   r   r   r   r   !   s    r   c                   @   s    e Zd ZdZdd„ Zdd„ ZdS ) ÚFileTransferServicerr   c                 C   ó    |  tjj¡ | d¡ tdƒ‚©r   zMethod not implemented!©Úset_codeÚgrpcÚ
+StatusCodeÚ
+UNIMPLEMENTEDÚ
+set_detailsÚNotImplementedError©r   Ú requestÚ contextr   r   r   r   9   ó   
+zFileTransferServicer.SendFilec                 C   r   r   r    r'   r   r   r   r   ?   r*   z FileTransferServicer.ReceiveFileN)r   r   r   r   r   r   r   r   r   r   r   6   s    r   c                 C   s^   t j| jtjjtjj dt j| jtjjtjj ddœ}t  	d|¡}| 
+|f¡ | 
+d|¡ d S )N)Úrequest_deserializerÚresponse_serializer)r   r   zfiletransfer.FileTransfer)r"   Úunary_unary_rpc_method_handlerr   r
+   r   r   r   r   r   Úmethod_handlers_generic_handlerÚadd_generic_rpc_handlersÚadd_registered_method_handlers)ÚservicerÚserverÚrpc_method_handlersÚgeneric_handlerr   r   r   Ú"add_FileTransferServicer_to_serverF   s    ýýúÿr5   c                   @   sL   e Zd ZdZe								d	dd„ƒZe								d	d d„ƒZdS )
+ÚFileTransferr   r   NFc
+           
+      C   ó0   t jj| |dtjjtjj |||||| ||	ddS )Nr    T©r
+   ©r"   Úexperimentalr   r
+   r   r   r   r   ©
+r(   ÚtargetÚ optionsÚchannel_credentialsÚcall_credentialsÚinsecureÚ
+compressionÚwait_for_readyÚ timeoutÚmetadatar   r   r   r   ]   ó    
+òzFileTransfer.SendFilec
+           
+      C   r7   )Nr
+   Tr8   r9   r;   r   r   r   r   x   rE   zFileTransfer.ReceiveFile)r   NNFNNNN) r   r   r   r   Ústaticmethodr   r   r   r   r   r   r6   Z   s,    ÷÷r6   )r   r"   ÚwarningsÚfiletransfer_pb2r
+   ÚGRPC_GENERATED_VERSIONÚ
+__version__ÚGRPC_VERSIONÚEXPECTED_ERROR_RELEASEÚSCHEDULED_RELEASE_DATEÚ_version_not_supportedÚgrpc._utilitiesr   Ú
+ImportErrorÚwarnÚRuntimeWarningÚobjectr   r   r5   r6   r   r   r   r   Ú<module>   sH   ÿ
+ÿ
+þý
+ü
+û
+ú ø
